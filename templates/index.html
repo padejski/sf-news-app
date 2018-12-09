@@ -1,12 +1,25 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
         <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
     </head>
     <body>
+        <nav>
+            <a href="http://djordje.padejski.net/">
+                <img src="{{ url_for('static', filename='SF.png') }}">
+            </a>
+        </nav>
+        <header>
+            <h1>Brutal Assaults on San Francisco Cops, SFDP Seeks Help</h1>
+            <div class="byline">
+                By <a href="http://djordje.padejski.net/">Djordje Padejski</a> thanks to <a href="http://first-news-app.readthedocs.org/">IRE </a> 
+            </div> 
+            <h3>These are the 60 assaults and incidents happened in San Francisco from January to March of 2014. Click on the map to find out about each incident.
+            Police incident data obtained from the City of San Francisco data department <a href="https://data.sfgov.org">DataSF</a></h3>
+        </header>
         <div id="map" style="width:100%; height:300px;"></div>
-        <h1>2014 Jan - Mar: SFPD police assaults</h1>
         <table border=1 cellpadding=7>
             <tr>
                 <th>Type of incident</th>

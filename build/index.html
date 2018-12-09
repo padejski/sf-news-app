@@ -1,0 +1,1381 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/style.css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    </head>
+    <body>
+        <nav>
+            <a href="http://djordje.padejski.net/">
+                <img src="/static/SF.png">
+            </a>
+        </nav>
+        <header>
+            <h1>Brutal Assaults on San Francisco Cops, SFDP Seeks Help</h1>
+            <div class="byline">
+                By <a href="http://djordje.padejski.net/">Djordje Padejski</a> thanks to <a href="http://first-news-app.readthedocs.org/">IRE </a> 
+            </div> 
+            <h3>These are the 60 assaults and incidents happened in San Francisco from January to March of 2014. Click on the map to find out about each incident.
+            Police incident data obtained from the City of San Francisco data department <a href="https://data.sfgov.org">DataSF</a>.</h3>
+        </header>
+        <div id="map" style="width:100%; height:300px;"></div>
+        <table border=1 cellpadding=7>
+            <tr>
+                <th>Type of incident</th>
+                <th>Date</th>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Address</th>
+                <th>Resolution</th>
+                <th>Race</th>
+            </tr>
+        
+            <tr>
+                <td><a href="1/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>2/28/2014</td>
+                <td>Friday</td>
+                <td>18:35:00</td>
+                <td>0 Block of DRUMM ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Latino</td>
+            </tr>
+        
+            <tr>
+                <td><a href="2/">ASSAULT ON A POLICE OFFICER WITH A DEADLY WEAPON</a></td>
+                <td>2/28/2014</td>
+                <td>Friday</td>
+                <td>14:15:00</td>
+                <td>800 Block of BRYANT ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Latino</td>
+            </tr>
+        
+            <tr>
+                <td><a href="3/">AGGRAVATED ASSAULT OF POLICE OFFICER,BODILY FORCE</a></td>
+                <td>2/22/2014</td>
+                <td>Saturday</td>
+                <td>11:40:00</td>
+                <td>400 Block of ELLIS ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Latino</td>
+            </tr>
+        
+            <tr>
+                <td><a href="4/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>2/21/2014</td>
+                <td>Friday</td>
+                <td>17:25:00</td>
+                <td>100 Block of LARKIN ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Black</td>
+            </tr>
+        
+            <tr>
+                <td><a href="5/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>2/18/2014</td>
+                <td>Tuesday</td>
+                <td>13:15:00</td>
+                <td>1000 Block of POTRERO AV</td>
+                <td>JUVENILE BOOKED</td>
+                <td>Black</td>
+            </tr>
+        
+            <tr>
+                <td><a href="6/">AGGRAVATED ASSAULT OF POLICE OFFICER,BODILY FORCE</a></td>
+                <td>2/17/2014</td>
+                <td>Monday</td>
+                <td>0:01:00</td>
+                <td>0 Block of SANTAFE AV</td>
+                <td>ARREST, BOOKED</td>
+                <td>Latino</td>
+            </tr>
+        
+            <tr>
+                <td><a href="7/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>2/16/2014</td>
+                <td>Sunday</td>
+                <td>13:13:00</td>
+                <td>0 Block of CORDOVA ST</td>
+                <td>ARREST, CITED</td>
+                <td>Black</td>
+            </tr>
+        
+            <tr>
+                <td><a href="8/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>2/15/2014</td>
+                <td>Saturday</td>
+                <td>18:47:00</td>
+                <td>800 Block of CLEMENT ST</td>
+                <td>ARREST, CITED</td>
+                <td>White</td>
+            </tr>
+        
+            <tr>
+                <td><a href="9/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>2/15/2014</td>
+                <td>Saturday</td>
+                <td>9:44:00</td>
+                <td>100 Block of KISKA RD</td>
+                <td>ARREST, CITED</td>
+                <td>Latino</td>
+            </tr>
+        
+            <tr>
+                <td><a href="10/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>2/10/2014</td>
+                <td>Monday</td>
+                <td>13:48:00</td>
+                <td>700 Block of MARKET ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Black</td>
+            </tr>
+        
+            <tr>
+                <td><a href="11/">ASSAULT ON A POLICE OFFICER WITH A DEADLY WEAPON</a></td>
+                <td>2/8/2014</td>
+                <td>Saturday</td>
+                <td>15:33:00</td>
+                <td>ORDWAY ST / GIRARD ST</td>
+                <td>JUVENILE BOOKED</td>
+                <td>Black</td>
+            </tr>
+        
+            <tr>
+                <td><a href="12/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>2/8/2014</td>
+                <td>Saturday</td>
+                <td>3:52:00</td>
+                <td>1000 Block of POTRERO AV</td>
+                <td>ARREST, BOOKED</td>
+                <td>White</td>
+            </tr>
+        
+            <tr>
+                <td><a href="13/">AGGRAVATED ASSAULT OF POLICE OFFICER,BODILY FORCE</a></td>
+                <td>2/7/2014</td>
+                <td>Friday</td>
+                <td>8:03:00</td>
+                <td>6100 Block of CALIFORNIA ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>White</td>
+            </tr>
+        
+            <tr>
+                <td><a href="14/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>2/7/2014</td>
+                <td>Friday</td>
+                <td>8:03:00</td>
+                <td>6100 Block of CALIFORNIA ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Black</td>
+            </tr>
+        
+            <tr>
+                <td><a href="15/">AGGRAVATED ASSAULT OF POLICE OFFICER,BODILY FORCE</a></td>
+                <td>2/6/2014</td>
+                <td>Thursday</td>
+                <td>8:30:00</td>
+                <td>900 Block of HYDE ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>White</td>
+            </tr>
+        
+            <tr>
+                <td><a href="16/">AGGRAVATED ASSAULT OF POLICE OFFICER,BODILY FORCE</a></td>
+                <td>2/4/2014</td>
+                <td>Tuesday</td>
+                <td>12:15:00</td>
+                <td>3RD ST / 20TH ST</td>
+                <td>NONE</td>
+                <td>Latino</td>
+            </tr>
+        
+            <tr>
+                <td><a href="17/">ASSAULT ON A POLICE OFFICER WITH A DEADLY WEAPON</a></td>
+                <td>2/4/2014</td>
+                <td>Tuesday</td>
+                <td>12:15:00</td>
+                <td>3RD ST / 20TH ST</td>
+                <td>NONE</td>
+                <td>White</td>
+            </tr>
+        
+            <tr>
+                <td><a href="18/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>2/1/2014</td>
+                <td>Saturday</td>
+                <td>20:16:00</td>
+                <td>2100 Block of MISSION ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Latino</td>
+            </tr>
+        
+            <tr>
+                <td><a href="19/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>1/30/2014</td>
+                <td>Thursday</td>
+                <td>16:04:00</td>
+                <td>900 Block of MISSION ST</td>
+                <td>ARREST, CITED</td>
+                <td>Latino</td>
+            </tr>
+        
+            <tr>
+                <td><a href="20/">AGGRAVATED ASSAULT OF POLICE OFFICER,BODILY FORCE</a></td>
+                <td>1/30/2014</td>
+                <td>Thursday</td>
+                <td>0:55:00</td>
+                <td>100 Block of TAYLOR ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Latino</td>
+            </tr>
+        
+            <tr>
+                <td><a href="21/">ASSAULT ON A POLICE OFFICER WITH A DEADLY WEAPON</a></td>
+                <td>1/27/2014</td>
+                <td>Monday</td>
+                <td>3:54:00</td>
+                <td>1200 Block of ARMSTRONG AV</td>
+                <td>NONE</td>
+                <td>Latino</td>
+            </tr>
+        
+            <tr>
+                <td><a href="22/">AGGRAVATED ASSAULT OF POLICE OFFICER,BODILY FORCE</a></td>
+                <td>1/27/2014</td>
+                <td>Monday</td>
+                <td>5:41:00</td>
+                <td>400 Block of 7TH ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Black</td>
+            </tr>
+        
+            <tr>
+                <td><a href="23/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>1/26/2014</td>
+                <td>Sunday</td>
+                <td>10:31:00</td>
+                <td>400 Block of HAYES ST</td>
+                <td>ARREST, CITED</td>
+                <td>White</td>
+            </tr>
+        
+            <tr>
+                <td><a href="24/">ASSAULT ON A POLICE OFFICER WITH A DEADLY WEAPON</a></td>
+                <td>1/25/2014</td>
+                <td>Saturday</td>
+                <td>10:26:00</td>
+                <td>1000 Block of CONNECTICUT ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Black</td>
+            </tr>
+        
+            <tr>
+                <td><a href="25/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>1/24/2014</td>
+                <td>Friday</td>
+                <td>9:25:00</td>
+                <td>FULTON ST / LARKIN ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Black</td>
+            </tr>
+        
+            <tr>
+                <td><a href="26/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>1/23/2014</td>
+                <td>Thursday</td>
+                <td>18:11:00</td>
+                <td>700 Block of GONZALEZ DR</td>
+                <td>PSYCHOPATHIC CASE</td>
+                <td>Black</td>
+            </tr>
+        
+            <tr>
+                <td><a href="27/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>1/20/2014</td>
+                <td>Monday</td>
+                <td>12:19:00</td>
+                <td>3100 Block of 26TH ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Black</td>
+            </tr>
+        
+            <tr>
+                <td><a href="28/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>1/19/2014</td>
+                <td>Sunday</td>
+                <td>19:54:00</td>
+                <td>1200 Block of POLK ST</td>
+                <td>ARREST, CITED</td>
+                <td>Black</td>
+            </tr>
+        
+            <tr>
+                <td><a href="29/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>1/17/2014</td>
+                <td>Friday</td>
+                <td>7:53:00</td>
+                <td>18TH AV / TARAVAL ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Asian</td>
+            </tr>
+        
+            <tr>
+                <td><a href="30/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>1/16/2014</td>
+                <td>Thursday</td>
+                <td>15:04:00</td>
+                <td>30TH AV / FULTON ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Asian</td>
+            </tr>
+        
+            <tr>
+                <td><a href="31/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>1/16/2014</td>
+                <td>Thursday</td>
+                <td>22:45:00</td>
+                <td>4600 Block of 3RD ST</td>
+                <td>NONE</td>
+                <td>Latino</td>
+            </tr>
+        
+            <tr>
+                <td><a href="32/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>1/16/2014</td>
+                <td>Thursday</td>
+                <td>7:20:00</td>
+                <td>2000 Block of MISSION ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Black</td>
+            </tr>
+        
+            <tr>
+                <td><a href="33/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>1/12/2014</td>
+                <td>Sunday</td>
+                <td>7:46:00</td>
+                <td>900 Block of MARKET ST</td>
+                <td>ARREST, CITED</td>
+                <td>White</td>
+            </tr>
+        
+            <tr>
+                <td><a href="34/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>1/12/2014</td>
+                <td>Sunday</td>
+                <td>19:00:00</td>
+                <td>800 Block of BRYANT ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Black</td>
+            </tr>
+        
+            <tr>
+                <td><a href="35/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>1/9/2014</td>
+                <td>Thursday</td>
+                <td>15:22:00</td>
+                <td>1000 Block of POTRERO AV</td>
+                <td>ARREST, CITED</td>
+                <td>White</td>
+            </tr>
+        
+            <tr>
+                <td><a href="36/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>1/8/2014</td>
+                <td>Wednesday</td>
+                <td>15:57:00</td>
+                <td>0 Block of CASTRO ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Black</td>
+            </tr>
+        
+            <tr>
+                <td><a href="37/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>1/7/2014</td>
+                <td>Tuesday</td>
+                <td>9:55:00</td>
+                <td>1200 Block of MISSION ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Latino</td>
+            </tr>
+        
+            <tr>
+                <td><a href="38/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>1/7/2014</td>
+                <td>Tuesday</td>
+                <td>9:40:00</td>
+                <td>100 Block of HUBBELL ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Black</td>
+            </tr>
+        
+            <tr>
+                <td><a href="39/">AGGRAVATED ASSAULT OF POLICE OFFICER,BODILY FORCE</a></td>
+                <td>1/6/2014</td>
+                <td>Monday</td>
+                <td>14:19:00</td>
+                <td>0 Block of TURK ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>White</td>
+            </tr>
+        
+            <tr>
+                <td><a href="40/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>1/6/2014</td>
+                <td>Monday</td>
+                <td>14:19:00</td>
+                <td>0 Block of TURK ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Black</td>
+            </tr>
+        
+            <tr>
+                <td><a href="41/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>1/6/2014</td>
+                <td>Monday</td>
+                <td>7:39:00</td>
+                <td>6TH ST / MINNA ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Black</td>
+            </tr>
+        
+            <tr>
+                <td><a href="42/">AGGRAVATED ASSAULT OF POLICE OFFICER,BODILY FORCE</a></td>
+                <td>1/5/2014</td>
+                <td>Sunday</td>
+                <td>16:55:00</td>
+                <td>200 Block of JEFFERSON ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Black</td>
+            </tr>
+        
+            <tr>
+                <td><a href="43/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>1/1/2014</td>
+                <td>Wednesday</td>
+                <td>16:33:00</td>
+                <td>17TH ST / CASTRO ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Black</td>
+            </tr>
+        
+            <tr>
+                <td><a href="44/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>1/1/2014</td>
+                <td>Wednesday</td>
+                <td>20:19:00</td>
+                <td>1000 Block of POTRERO AV</td>
+                <td>ARREST, BOOKED</td>
+                <td>Latino</td>
+            </tr>
+        
+            <tr>
+                <td><a href="45/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>12/31/2013</td>
+                <td>Tuesday</td>
+                <td>7:37:00</td>
+                <td>200 Block of 8TH ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Latino</td>
+            </tr>
+        
+            <tr>
+                <td><a href="46/">ASSAULT ON A POLICE OFFICER WITH A DEADLY WEAPON</a></td>
+                <td>12/30/2013</td>
+                <td>Monday</td>
+                <td>20:50:00</td>
+                <td>1500 Block of 25TH ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>White</td>
+            </tr>
+        
+            <tr>
+                <td><a href="47/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>12/26/2013</td>
+                <td>Thursday</td>
+                <td>17:27:00</td>
+                <td>1300 Block of DEHARO ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Latino</td>
+            </tr>
+        
+            <tr>
+                <td><a href="48/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>12/23/2013</td>
+                <td>Monday</td>
+                <td>20:50:00</td>
+                <td>800 Block of BRYANT ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>White</td>
+            </tr>
+        
+            <tr>
+                <td><a href="49/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>12/21/2013</td>
+                <td>Saturday</td>
+                <td>11:34:00</td>
+                <td>2400 Block of SAN BRUNO AV</td>
+                <td>JUVENILE CITED</td>
+                <td>Latino</td>
+            </tr>
+        
+            <tr>
+                <td><a href="50/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>12/20/2013</td>
+                <td>Friday</td>
+                <td>21:15:00</td>
+                <td>MISSION ST / 30TH ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Black</td>
+            </tr>
+        
+            <tr>
+                <td><a href="51/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>12/18/2013</td>
+                <td>Wednesday</td>
+                <td>9:58:00</td>
+                <td>300 Block of ELLIS ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Latino</td>
+            </tr>
+        
+            <tr>
+                <td><a href="52/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>12/17/2013</td>
+                <td>Tuesday</td>
+                <td>15:20:00</td>
+                <td>CORBETT AV / IRON AL</td>
+                <td>ARREST, BOOKED</td>
+                <td>Latino</td>
+            </tr>
+        
+            <tr>
+                <td><a href="53/">ASSAULT ON A POLICE OFFICER WITH A DEADLY WEAPON</a></td>
+                <td>12/17/2013</td>
+                <td>Tuesday</td>
+                <td>2:00:00</td>
+                <td>2100 Block of 20TH AV</td>
+                <td>ARREST, BOOKED</td>
+                <td>Black</td>
+            </tr>
+        
+            <tr>
+                <td><a href="54/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>12/17/2013</td>
+                <td>Tuesday</td>
+                <td>9:19:00</td>
+                <td>11TH ST / MISSION ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Black</td>
+            </tr>
+        
+            <tr>
+                <td><a href="55/">ASSAULT ON A POLICE OFFICER WITH A DEADLY WEAPON</a></td>
+                <td>12/13/2013</td>
+                <td>Friday</td>
+                <td>11:00:00</td>
+                <td>100 Block of CAYUGA AV</td>
+                <td>ARREST, BOOKED</td>
+                <td>Black</td>
+            </tr>
+        
+            <tr>
+                <td><a href="56/">AGGRAVATED ASSAULT OF POLICE OFFICER,BODILY FORCE</a></td>
+                <td>12/12/2013</td>
+                <td>Thursday</td>
+                <td>14:21:00</td>
+                <td>500 Block of JONES ST</td>
+                <td>ARREST, CITED</td>
+                <td>White</td>
+            </tr>
+        
+            <tr>
+                <td><a href="57/">AGGRAVATED ASSAULT ON POLICE OFFICER WITH A KNIFE</a></td>
+                <td>12/7/2013</td>
+                <td>Saturday</td>
+                <td>20:50:00</td>
+                <td>8000 Block of GEARY BL</td>
+                <td>ARREST, BOOKED</td>
+                <td>White</td>
+            </tr>
+        
+            <tr>
+                <td><a href="58/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>12/6/2013</td>
+                <td>Friday</td>
+                <td>18:00:00</td>
+                <td>1ST ST / HOWARD ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Latino</td>
+            </tr>
+        
+            <tr>
+                <td><a href="59/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>12/4/2013</td>
+                <td>Wednesday</td>
+                <td>19:23:00</td>
+                <td>100 Block of 6TH ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Black</td>
+            </tr>
+        
+            <tr>
+                <td><a href="60/">BATTERY OF A POLICE OFFICER</a></td>
+                <td>12/1/2013</td>
+                <td>Sunday</td>
+                <td>17:13:00</td>
+                <td>MCALLISTER ST / LEAVENWORTH ST</td>
+                <td>ARREST, BOOKED</td>
+                <td>Black</td>
+            </tr>
+        
+        </table>
+        <script type="text/javascript">
+        	var map = L.map('map').setView([37.78, -122.43], 13);
+            var osmLayer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                attribution: 'Data, imagery and map information provided by <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.'
+            });
+            map.addLayer(osmLayer);
+            var data = {
+              "type": "FeatureCollection",
+              "features": [
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "1"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.3964054, 37.79392799]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "ASSAULT ON A POLICE OFFICER WITH A DEADLY WEAPON",
+                    "id": "2"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.403743, 37.7752317]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "AGGRAVATED ASSAULT OF POLICE OFFICER,BODILY FORCE",
+                    "id": "3"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4129786, 37.78487505]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "4"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4165446, 37.77867833]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "5"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4066566, 37.75682561]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "AGGRAVATED ASSAULT OF POLICE OFFICER,BODILY FORCE",
+                    "id": "6"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4004596, 37.73360118]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "7"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4362205, 37.71324631]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "8"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4678774, 37.78275593]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "9"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.3769264, 37.7301016]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "10"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4053908, 37.78614218]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "ASSAULT ON A POLICE OFFICER WITH A DEADLY WEAPON",
+                    "id": "11"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4015993, 37.7201837]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "12"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4066566, 37.75682561]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "AGGRAVATED ASSAULT OF POLICE OFFICER,BODILY FORCE",
+                    "id": "13"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.483318, 37.78406678]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "14"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.483318, 37.78406678]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "AGGRAVATED ASSAULT OF POLICE OFFICER,BODILY FORCE",
+                    "id": "15"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4169791, 37.78912191]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "AGGRAVATED ASSAULT OF POLICE OFFICER,BODILY FORCE",
+                    "id": "16"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.3885594, 37.76049292]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "ASSAULT ON A POLICE OFFICER WITH A DEADLY WEAPON",
+                    "id": "17"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.3885594, 37.76049292]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "18"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4194385, 37.7622065]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "19"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4073888, 37.78196769]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "AGGRAVATED ASSAULT OF POLICE OFFICER,BODILY FORCE",
+                    "id": "20"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4107632, 37.78339886]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "ASSAULT ON A POLICE OFFICER WITH A DEADLY WEAPON",
+                    "id": "21"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.3864131, 37.7230546]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "AGGRAVATED ASSAULT OF POLICE OFFICER,BODILY FORCE",
+                    "id": "22"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4058785, 37.77522525]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "23"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4246055, 37.77671019]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "ASSAULT ON A POLICE OFFICER WITH A DEADLY WEAPON",
+                    "id": "24"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.3964505, 37.75268578]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "25"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.41677, 37.77958458]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "26"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.480621, 37.7175005]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "27"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4133789, 37.74929481]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "28"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4203316, 37.78811869]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "29"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4746215, 37.74309517]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "30"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4895386, 37.7723247]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "31"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.3902984, 37.73607164]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "32"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4196119, 37.76486799]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "33"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4082523, 37.78400092]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "34"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.403743, 37.7752317]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "35"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4066566, 37.75682561]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "36"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4357186, 37.76868871]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "37"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4137976, 37.7769074]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "38"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.3975332, 37.76718053]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "AGGRAVATED ASSAULT OF POLICE OFFICER,BODILY FORCE",
+                    "id": "39"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4102592, 37.78334511]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "40"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4102592, 37.78334511]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "41"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.408163, 37.78053454]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "AGGRAVATED ASSAULT OF POLICE OFFICER,BODILY FORCE",
+                    "id": "42"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4165395, 37.80808892]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "43"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4351877, 37.76267028]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "44"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4066566, 37.75682561]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "45"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4115718, 37.7762382]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "ASSAULT ON A POLICE OFFICER WITH A DEADLY WEAPON",
+                    "id": "46"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.3945489, 37.75231964]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "47"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4003952, 37.75288034]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "48"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.403743, 37.7752317]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "49"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4046915, 37.73016824]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "50"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4219709, 37.74237522]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "51"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4127661, 37.78490188]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "52"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4446669, 37.75785271]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "ASSAULT ON A POLICE OFFICER WITH A DEADLY WEAPON",
+                    "id": "53"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4770229, 37.74735199]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "54"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4171049, 37.77432429]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "ASSAULT ON A POLICE OFFICER WITH A DEADLY WEAPON",
+                    "id": "55"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4329092, 37.73047356]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "AGGRAVATED ASSAULT OF POLICE OFFICER,BODILY FORCE",
+                    "id": "56"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4130128, 37.78617638]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "AGGRAVATED ASSAULT ON POLICE OFFICER WITH A KNIFE",
+                    "id": "57"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.5055701, 37.77910136]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "58"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.3960394, 37.78853682]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "59"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4076371, 37.78027387]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "full_name": "BATTERY OF A POLICE OFFICER",
+                    "id": "60"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4136794, 37.78092583]
+                  }
+                }
+                
+              ]
+            };
+            var dataLayer = L.geoJson(data, {
+                onEachFeature: function(feature, layer) {
+                    layer.bindPopup(
+                        '<a href="' + feature.properties.id + '/">' +
+                            feature.properties.full_name +
+                        '</a>'
+                    );
+                }
+            });
+            map.addLayer(dataLayer);
+        </script>
+    </body>
+</html>

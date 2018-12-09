@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    </head>
+    <body>
+        <div id="map" style="width:100%; height:300px;"></div>
+        <h1>
+            On Monday, 12/23/2013 at 20:50:00 at 800 Block of BRYANT ST in SOUTHERN neighborhood of San Francisco,
+            BATTERY OF A POLICE OFFICER happened and White individual was in arrest, booked.
+        </h1>
+        <script type="text/javascript">
+            var map = L.map('map').setView([37.7752317, -122.403743], 16);
+            var osmLayer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                attribution: 'Data, imagery and map information provided by <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.'
+            });
+            map.addLayer(osmLayer);
+            var marker = L.marker([37.7752317, -122.403743]).addTo(map);
+        </script>
+    </body>
+</html>

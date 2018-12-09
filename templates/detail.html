@@ -7,9 +7,8 @@
     <body>
         <div id="map" style="width:100%; height:300px;"></div>
         <h1>
-            {{ object.full_name }}, a {{ object.age }} year old,
-            {{ object.race }} {{ object.gender|lower }} died on {{ object.date }}
-            in a {{ object.type|lower }} at {{ object.address }} in {{ object.neighborhood }}.
+            On {{ object.age }}, {{ object.date }} at {{ object.gender|lower }} at {{ object.address }} in {{ object.neighborhood }} neighborhood of San Francisco,
+            {{ object.full_name }} happened and {{ object.race }} individual was in {{ object.type|lower }}.
         </h1>
         <script type="text/javascript">
             var map = L.map('map').setView([{{ object.y }}, {{ object.x }}], 16);
